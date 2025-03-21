@@ -103,8 +103,3 @@ git remote add origin https://github.com/your-username/your-repo-name.git
 git push -u origin main
 
 
-## 📜 License
-This project is open-source and available under the *MIT License*.
-
----
-💡 *Need Help?* Open an issue in the repository or contact the project maintainers!
