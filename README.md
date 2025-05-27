@@ -1,4 +1,4 @@
-# 🎤 Real-Time MULTILINGUAL Emotion Detection from Speech Signals
+# 🎤 Real-Time Multilingual Emotion Detection from Speech Signals
 
 ## 📌 Project Overview
 This project is a *Real-Time Emotion Detection System* that analyzes emotions from voice recordings using *Flask (Python) & Node.js* for backend processing and *React.js* for frontend visualization. The system transcribes audio, translates non-English text, and classifies emotions using a pre-trained *RoBERTa-based model*.
