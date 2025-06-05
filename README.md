@@ -30,6 +30,7 @@ This project is a real-time emotion detection system that analyzes emotions from
 ---
 
 ## 📁 Project Structure
+```bash
 Emotion-Detection-Voice/
 ├── backend/
 │   ├── src/
