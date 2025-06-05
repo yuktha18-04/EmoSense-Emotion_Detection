@@ -1,4 +1,4 @@
-# 🎤 Real-Time Multilingual Emotion Detection from Speech Signals
+# 🎤EmoSense: A Real-Time Multilingual Emotion Detection from Speech Signals
 
 ## 📌 Overview
 This project is a real-time emotion detection system that analyzes emotions from voice inputs using a combination of Flask (Python) and Node.js for backend processing, and React.js for frontend visualization. It supports multilingual speech, automatically transcribes and translates audio, and classifies emotions using a RoBERTa-based transformer model.
