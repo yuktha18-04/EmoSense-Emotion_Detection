@@ -1,105 +1,52 @@
 # 🎤 Real-Time Multilingual Emotion Detection from Speech Signals
 
-## 📌 Project Overview
-This project is a *Real-Time Emotion Detection System* that analyzes emotions from voice recordings using *Flask (Python) & Node.js* for backend processing and *React.js* for frontend visualization. The system transcribes audio, translates non-English text, and classifies emotions using a pre-trained *RoBERTa-based model*.
+## 📌 Overview
+This project is a real-time emotion detection system that analyzes emotions from voice inputs using a combination of Flask (Python) and Node.js for backend processing, and React.js for frontend visualization. It supports multilingual speech, automatically transcribes and translates audio, and classifies emotions using a RoBERTa-based transformer model.
 
-## 🚀 Features
-- 🎙 *Speech to Text*: Converts voice recordings to text using Google Speech Recognition.
-- 🌍 *Multilingual Support*: Detects and translates non-English text to English using Google Translate.
-- 🤖 *Emotion Analysis*: Uses the roberta-base-go_emotions model to classify emotions with confidence scores.
-- 🖥 *Frontend Dashboard*: Displays detected emotions in an intuitive UI.
-- 🔄 *Real-time Processing*: Uploads audio files, processes them, and returns results instantly.
+---
+
+![WhatsApp Image 2025-05-27 at 11 22 41_964c7949](https://github.com/user-attachments/assets/b89c7a16-c565-486f-8fc6-6e5bd711b636)
+
+![WhatsApp Image 2025-05-27 at 11 22 49_9ed344bb](https://github.com/user-attachments/assets/b36ef351-10f7-40b2-a75a-c853a2b74ca1)
+
+![WhatsApp Image 2025-05-27 at 11 23 00_aa8ac564](https://github.com/user-attachments/assets/aa77d34e-643c-4ac2-bdd8-9357365f0041)
+
+
+
+## 🚀 Key Features
+- 🎙 **Speech-to-Text**: Converts recorded audio into text using Google Speech Recognition.
+- 🌍 **Multilingual Translation**: Detects and translates non-English text to English via Google Translate API.
+- 🤖 **Emotion Detection**: Utilizes the `roberta-base-go_emotions` model for accurate emotion classification with confidence scores.
+- 🖥 **Interactive Dashboard**: Real-time visualization of detected emotions in a responsive UI.
+- ⚡ **Instant Feedback**: Uploads and processes audio with near real-time response.
+
+---
 
 ## 🛠 Tech Stack
-- *Backend*: Flask (Python), Node.js (Express), Google Speech Recognition, Google Translate API, Hugging Face Transformers
-- *Frontend*: React.js, Tailwind CSS, TypeScript (for some components)
-- *Deployment*: Flask API (Backend), React (Frontend), GitHub
+- **Backend**: Flask (Python), Node.js (Express), Google Speech Recognition, Google Translate API, Hugging Face Transformers
+- **Frontend**: React.js, Tailwind CSS, TypeScript
+- **Deployment**: Modular architecture — Flask (emotion analysis), Node.js (API routing), React (UI)
 
-## 📂 Project Structure
+---
 
-📦 Emotion-Detection-Voice
-├── backend/ (Node.js & Flask API)
+## 📁 Project Structure
+Emotion-Detection-Voice/
+├── backend/
 │   ├── src/
 │   │   ├── controllers/
-│   │   │   ├── audiocontroller.js
 │   │   ├── routes/
-│   │   │   ├── audioroutes.js
-│   │   │   ├── musicroutes.js
-│   │   ├── index.js (Backend entry point)
+│   │   └── index.js
 │   ├── flask_api/
-│   │   ├── emotion.py (Emotion classification logic)
-│   ├── uploads/ (Stores audio files temporarily)
-│   ├── .env (Environment variables)
-│   ├── package.json (Node.js dependencies)
-├── frontend/ (React.js UI)
+│   │   └── emotion.py
+│   ├── uploads/
+│   └── package.json
+├── frontend/
 │   ├── src/
 │   │   ├── components/
-│   │   │   ├── AudioAnalyzer.js
-│   │   │   ├── AudioVisualizer.tsx
-│   │   │   ├── EmotionResult.js
-│   │   │   ├── EmotionTrends.js
-│   │   │   ├── Recorder.js
-│   │   │   ├── StopRecordingButton.tsx
-│   │   ├── App.js (Main app logic)
+│   │   ├── App.js
+│   │   └── index.js
 │   ├── public/
-│   ├── package.json (React dependencies)
-│   ├── index.js (React entry point)
-├── README.md (Project Documentation)
-
-
-## 🔧 Setup & Installation
-### 1️⃣ Clone the Repository
-sh
-git clone https://github.com/your-username/your-repo-name.git
-cd Emotion-Detection-Voice
-
-
-### 2️⃣ Backend Setup (Node.js & Flask API)
-sh
-cd backend
-# Setup Node.js backend
-npm install
-npm start  # Run Express server
-
-# Setup Flask API
-cd flask_api
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-python emotion.py  # Run Flask server
-
-
-### 3️⃣ Frontend Setup (React.js)
-sh
-cd frontend
-npm install
-npm start  # Run React UI
-
-
-## 🎯 API Endpoints
-### 🎙 Upload Audio for Emotion Detection
-*Endpoint:* POST /predict
-*Request:* Upload an audio file as FormData
-*Response:*
-json
-{
-  "original_transcription": "I'm feeling very happy today!",
-  "translated_text": "I'm feeling very happy today!",
-  "emotions": [
-    { "label": "joy", "score": 0.98 },
-    { "label": "optimism", "score": 0.75 },
-    { "label": "love", "score": 0.68 }
-  ]
-}
-
-
-## 🛠 Deployment (GitHub)
-### Push to GitHub
-sh
-git add .
-git commit -m "Initial commit - Flask & Node.js emotion detection with React"
-git branch -M main
-git remote add origin https://github.com/your-username/your-repo-name.git
-git push -u origin main
-
+│   └── package.json
+├── README.md
+└── .gitignore
 
