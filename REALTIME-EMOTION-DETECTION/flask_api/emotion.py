@@ -2,15 +2,12 @@ from flask import Flask, request, jsonify
 import speech_recognition as sr
 import transformers
 from flask_cors import CORS
-from googletrans import Translator  # Google Translate API for multilingual support
+from deep_translator import GoogleTranslator
 import os
 import wave 
 
 app = Flask(__name__)
 CORS(app)  # Allow CORS for all routes
-
-# Initialize Google Translator
-translator = Translator()
 
 # Load emotion classifier
 try:
@@ -44,16 +41,13 @@ def transcribe_audio(file_path):
         return None
 
 def translate_text(text):
-    """Translates non-English text to English."""
     try:
-        detected_lang = translator.detect(text).lang  # Detect language
-        if detected_lang != "en":  # Only translate if not already English
-            translated = translator.translate(text, dest="en")
-            print(f"🌍 Translated ({detected_lang} → en): {translated.text}")
-            return translated.text
+        translated = GoogleTranslator(source='auto', target='en').translate(text)
+        print(f"🌍 Translated: {translated}")
+        return translated
     except Exception as e:
         print(f"⚠️ Translation failed: {e}")
-    return text  # Return original if translation fails
+    return text
 
 @app.route("/predict", methods=["POST"])
 def predict_emotion():
@@ -108,4 +102,4 @@ def predict_emotion():
     })
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(debug=False, port=5000,use_reloader=False)
