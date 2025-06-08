@@ -5,19 +5,25 @@ This project is a real-time emotion detection system that analyzes emotions from
 
 ---
 
-![WhatsApp Image 2025-05-27 at 11 22 41_964c7949](https://github.com/user-attachments/assets/b89c7a16-c565-486f-8fc6-6e5bd711b636)
+![WhatsApp Image 2025-06-09 at 00 38 47_b0e10af0](https://github.com/user-attachments/assets/5f9b1090-1838-46ba-91ec-e3dffaeb63e8)
+Dashboard
 
-![WhatsApp Image 2025-05-27 at 11 22 49_9ed344bb](https://github.com/user-attachments/assets/b36ef351-10f7-40b2-a75a-c853a2b74ca1)
+![WhatsApp Image 2025-06-09 at 00 40 00_348d3b89](https://github.com/user-attachments/assets/a955254e-8e1b-4371-bfea-be769d0416f9)
+start recording
 
 ![WhatsApp Image 2025-05-27 at 11 23 00_aa8ac564](https://github.com/user-attachments/assets/aa77d34e-643c-4ac2-bdd8-9357365f0041)
+analyse recording
 
+![WhatsApp Image 2025-06-09 at 00 40 55_71811df5](https://github.com/user-attachments/assets/c94aae86-23ce-4fdb-83a1-3daa09b94bbb)
+Results 
 
+![WhatsApp Image 2025-06-09 at 00 44 32_9a826913](https://github.com/user-attachments/assets/de47f140-b79c-4cb7-ad6b-5c37260eadcf)
 
 ## 🚀 Key Features
 - 🎙 **Speech-to-Text**: Converts recorded audio into text using Google Speech Recognition.
 - 🌍 **Multilingual Translation**: Detects and translates non-English text to English via Google Translate API.
 - 🤖 **Emotion Detection**: Utilizes the `roberta-base-go_emotions` model for accurate emotion classification with confidence scores.
-- 🖥 **Interactive Dashboard**: Real-time visualization of detected emotions in a responsive UI.
+- 🖥 **Interactive Dashboard**: Real-time visualization of detected emotions in a responsive UI and changes background colour based on emotion.
 - ⚡ **Instant Feedback**: Uploads and processes audio with near real-time response.
 
 ---
